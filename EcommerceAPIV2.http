@@ -1,0 +1,38 @@
+@EcommerceAPIV2_HostAddress = http://localhost:5082
+
+### Get All Employees
+GET {{EcommerceAPIV2_HostAddress}}/api/employee
+Accept: application/json
+
+### Get Employee by ID
+GET {{EcommerceAPIV2_HostAddress}}/api/employee/1
+Accept: application/json
+
+### Create Employee
+POST {{EcommerceAPIV2_HostAddress}}/api/employee
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "department": "Engineering",
+  "salary": 85000.00,
+  "joiningDate": "2024-01-15T00:00:00Z"
+}
+
+### Update Employee
+PUT {{EcommerceAPIV2_HostAddress}}/api/employee/1
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "email": "john.smith@example.com",
+  "department": "Engineering",
+  "salary": 95000.00,
+  "isActive": true
+}
+
+### Delete Employee
+DELETE {{EcommerceAPIV2_HostAddress}}/api/employee/1
